@@ -1,2 +1,0 @@
-# group-git-repo
-collab
