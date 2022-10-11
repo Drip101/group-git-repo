@@ -8,7 +8,7 @@ let gyms = [
         distance: 0.3
 
     },
-
+// need to add images, addresses and descriptions to each gym location//
     {
         title: "planet fitness",
         image: "pf.png",
