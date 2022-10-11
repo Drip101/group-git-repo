@@ -9,3 +9,5 @@ As a User, I want to be able to search for local gyms near me,
 As a User, I want to be able to determine the destination, 
 If I click on the picture, it will tell me where it is located on Google maps,
 As a User, I want to be able to filter best recommendations to least recommendations.
+
+Acceptance Criteria
