@@ -5,7 +5,7 @@ let gyms = [
         description: "description",
         rating: 4,
         location: ["address"],
-        distance:0.3
+        distance: 0.3
 
     },
 
@@ -24,7 +24,7 @@ let gyms = [
         description: "description",
         rating: 3.2,
         location: ["address"],
-        distance:0.1
+        distance: 0.1
     }
 ]
 let ss = e => document.querySelector(e)
@@ -39,3 +39,13 @@ const showlocations = (g) => {
     ss("#gyms").append(gym)
 }
 gyms.forEach(g => showlocations(g))
+//created filters for gyms: distance, rating, title//
+
+Array.from(document.querySelectorAll(".distance input")).forEach(i => {
+    i.addEventListener("input", () => {
+        ss("#gyms").innerHTML = ""
+        let v = ss(".distance input:checked").value
+        let d = gyms.filter(g => g.distance == v)
+        d.forEach(g => showlocations(g))
+    })
+})
