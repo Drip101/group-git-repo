@@ -1,3 +1,23 @@
-.searchButton{
-    
+* { 
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;}
+
+body {
+   
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("picture /pexels-lukas-669576.jpg");
+    background-repeat: no-repeat;
 }
+.hero {
+    color:azure;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("tree.jpeg");
+    text-align: center;
+    background-size: cover;
+    /*filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://24.media.tumblr.com/ccb268832580ac12951828a1c179de69/tumblr_mo2xbk8JUK1st5lhmo1_1280.jpg', sizingMethod='scale');*/
+    height: 500px;
+ 
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:relative;}
