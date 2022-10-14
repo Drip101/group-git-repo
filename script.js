@@ -56,13 +56,14 @@ subscribe.addEventListener("click", (e) => {
     //weightval = weight.value
     //heightval = height.value
     //we have to add the url to the event listener locally to make sure it work.
-    let a=ss("#age").value,w=ss("#weight").value,h=ss("#height").value
-    if(isNaN(w) || (w<40&&w>160)) {
-r.textContent="must be between 40kg and 160kg"
+    let a=ss("#age").value,w=parseInt(ss("#weight").value),h=ss("#height").value
+    console.log(w,h)
+    if (w<40||w>160) {
+r.textContent="Weight must be between 40kg and 160kg"
 r.classList.add("active")
 ss("#weight").value=""
-    }else if(isNaN(h) || (h<130&&h>230)) {
-        r.textContent="must be between 130cm and 230cm"
+    }else if (h<130||h>230) {
+        r.textContent="Height must be between 130cm and 230cm"
         r.classList.add("active")
         ss("#height").value=""
             }
@@ -91,9 +92,13 @@ ss("#weight").value=""
             console.log(response)
         //console.log(response.data.bmi)
         let bmi=response.data.bmi
+        ss("#bmi").textContent="bmi: "+response.data.bmi
+        ss("#healthyweight").textContent="health: "+response.data.health
         //console.log(bmi)
         })
         .catch(err => console.error(err));
+
+        
     }
 })
 
