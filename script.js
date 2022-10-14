@@ -85,7 +85,7 @@ ss("#weight").value=""
             'X-RapidAPI-Host': 'fitness-calculator.p.rapidapi.com'
         }
     };
-    
+    //first api is complete
     fetch(exampleUrl, options)
         .then(response => response.json())
         .then(response => {
