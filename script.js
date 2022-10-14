@@ -33,18 +33,36 @@ let age = document.getElementById("age")
 let ageval
 console.log(age)
 
+//let weight = document.getElementById("weight")
+//let weightval
+//console.log(weight)
+
+//let height = document.getElementById("height")
+//let heightval
+//console.log(height)
+
+
 let subscribe = document.getElementById("subscribe")
 console.log(subscribe)
 
-
+// var fff = funciton () {
+    //
+//}
 subscribe.addEventListener("click", () => {
     console.log("hello")
     ageval = age.value
+    //weightval = weight.value
+    //heightval = height.value
     //we have to add the url to the event listener locally to make sure it work.
-    let exampleUrl = 'https://fitness-calculator.p.rapidapi.com/bmi?age=' + ageval + '&weight=65&height=180'
-    console.log(age.value)
-    console.log(ageval)
-    console.log(exampleUrl)
+    let exampleUrl = 'https://fitness-calculator.p.rapidapi.com/bmi?age=' + ageval + '&weight=' + weightval + '&height='+ heightval
+    //  let exampleUrl = 'https://fitness-calculator.p.rapidapi.com/bmi?age=23&weight=65&height=180'
+    //console.log(age.value)
+    //console.log(ageval)
+    //console.log(weight.value)
+    //console.log(weightval)
+    //console.log(height.value)
+    //console.log(heightval)
+    //console.log(exampleUrl)
     const options = {
         method: 'GET',
         headers: {
@@ -63,6 +81,7 @@ subscribe.addEventListener("click", () => {
         })
         .catch(err => console.error(err));
 })
+
 
 
 
