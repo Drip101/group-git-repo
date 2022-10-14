@@ -29,9 +29,9 @@ let gyms = [
 ]
 let ss = e => document.querySelector(e)
 
-let age = document.getElementById("age")
-let ageval
-console.log(age)
+//let age = document.getElementById("age")
+//let ageval
+//console.log(age)
 
 //let weight = document.getElementById("weight")
 //let weightval
@@ -43,18 +43,32 @@ console.log(age)
 
 
 let subscribe = document.getElementById("subscribe")
-console.log(subscribe)
+//console.log(subscribe)
 
 // var fff = funciton () {
     //
 //}
-subscribe.addEventListener("click", () => {
+subscribe.addEventListener("click", (e) => {
     console.log("hello")
-    ageval = age.value
+    e.preventDefault()
+    let r=ss("#error")
+    //ageval = age.value
     //weightval = weight.value
     //heightval = height.value
     //we have to add the url to the event listener locally to make sure it work.
-    let exampleUrl = 'https://fitness-calculator.p.rapidapi.com/bmi?age=' + ageval + '&weight=' + weightval + '&height='+ heightval
+    let a=ss("#age").value,w=ss("#weight").value,h=ss("#height").value
+    if(isNaN(w) || (w<40&&w>160)) {
+r.textContent="must be between 40kg and 160kg"
+r.classList.add("active")
+ss("#weight").value=""
+    }else if(isNaN(h) || (h<130&&h>230)) {
+        r.textContent="must be between 130cm and 230cm"
+        r.classList.add("active")
+        ss("#height").value=""
+            }
+            else {
+                r.classList.remove("active")
+    let exampleUrl = 'https://fitness-calculator.p.rapidapi.com/bmi?age=' + a + '&weight=' + w + '&height='+ h+''
     //  let exampleUrl = 'https://fitness-calculator.p.rapidapi.com/bmi?age=23&weight=65&height=180'
     //console.log(age.value)
     //console.log(ageval)
@@ -74,12 +88,13 @@ subscribe.addEventListener("click", () => {
     fetch(exampleUrl, options)
         .then(response => response.json())
         .then(response => {
-            //console.log(response)
+            console.log(response)
         //console.log(response.data.bmi)
         let bmi=response.data.bmi
         //console.log(bmi)
         })
         .catch(err => console.error(err));
+    }
 })
 
 
