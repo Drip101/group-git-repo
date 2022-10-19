@@ -1,7 +1,7 @@
 let gyms = [
     {
         title: "la fitness",
-        image: "lf.png",
+        image: "workout photo background.jpeg",
         description: "description",
         rating: 4,
         location: ["address"],
@@ -11,7 +11,7 @@ let gyms = [
     // need to add images, addresses and descriptions to each gym location//
     {
         title: "planet fitness",
-        image: "pf.png",
+        image: "fitness background 2.jpeg",
         description: "description",
         rating: 3.8,
         location: ["address"],
