@@ -55,7 +55,7 @@ a {
     grid-template-columns: repeat(3, 32%);
 }
 
-.gyms img{
+.gyms img {
     width: 100%;
     height: 350px;
     border-radius: 12px;
